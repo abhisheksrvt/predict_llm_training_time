@@ -75,4 +75,27 @@ Install via:
 
 ```bash
 pip install scikit-learn matplotlib
+```
+
+**Usage**
+Run Time Estimator: Enter model size, tokens, context length, and number of GPUs when prompted.
+```bash
+python predict.py
+```
+
+Generate Plot: This will generate a training time vs model size curve using regression.
+```bash
+python plot.py
+```
+
+Notes: 
+1. The underlying regression model is currently polynomial of degree 1 (linear). You can change this to degree 2 if this fits better.
+2. Cost per GPU-hour is set to ₹550 but can be customized in the script.
+3. The training time model was built using empirical data from actual LLM training runs on NVIDIA H200 GPUs, using custom Transformers and efficient training pipelines.
+
+License: This project is released under the MIT License.
+
+Contributing
+
+Pull requests and improvements are welcome! If you have trained on different GPU types or contexts and want to contribute more data, feel free to open an issue or PR.
 
