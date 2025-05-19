@@ -93,6 +93,16 @@ Notes:
 2. Cost per GPU-hour is set to ₹550 but can be customized in the script.
 3. The training time model was built using empirical data from actual LLM training runs on NVIDIA H200 GPUs, using custom Transformers and efficient training pipelines.
 
+Caution: Actual training time depends on multiple factors beyond just model size:
+1. Hardware efficiency (e.g. A100 vs H100 vs H200)
+2. Model architecture (e.g. SwiGLU, MoE, attention optimizations)
+3. Tokenization and dataset structure (packed sequences vs. padding)
+4. I/O bottlenecks and dataloader performance
+5. Gradient accumulation and global batch size
+6. Optimizer choice and mixed-precision strategies (bf16, fp16, etc.)
+
+This estimator assumes consistent training throughput on H200 GPUs under controlled settings (bf16, 2048 context, 1B tokens, grad accum = 2). It’s designed as a quick planning tool, not a simulator — real-world performance may vary by ±15–30% or more depending on the pipeline.
+
 License: This project is released under the MIT License.
 
 Contributing
