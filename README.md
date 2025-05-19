@@ -57,17 +57,17 @@ The model is trained on real measurements from various model sizes:
 ```bash
 <---------------Enter Parameters--------------->
 
-Enter model size of parameters (in billion): 1
-Enter no of tokens to train (in billion): 20
-Enter context length: 2048
-Enter no of gpus: 4
+Enter model size of parameters (in billion): 2.18
+Enter no of tokens to train (in billion): 4000
+Enter context length: 8192
+Enter no of gpus: 256
 
 <---------------Prediction Result--------------->
 
-Estimated GPU-Hours: 11,168 hrs
-Total Training Time: 116d 18h 0m
-Total Cost: ₹ 61.42 lakhs
-```bash
+Estimated GPU-Hours: 58,324 hrs
+Total Training Time: 9d 11h 49m
+Total Cost: ₹ 3.21 cr
+```
 
 Requirements: scikit-learn, matplotlib (for plotting)
 
@@ -75,5 +75,4 @@ Install via:
 
 ```bash
 pip install scikit-learn matplotlib
-```bash
 
